@@ -172,6 +172,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://harmonious-longma-e97533.netlify.app"
 ]
 
 REST_FRAMEWORK = {
