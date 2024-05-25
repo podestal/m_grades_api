@@ -25,7 +25,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY')
+SECRET_KEY = 'django-insecure-vmsq$%vf2s!h2!qxx%%_8)ud+p(kkevv1=f^2&&*d$qk17ih^a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -65,7 +65,7 @@ MIDDLEWARE = [
 ]
 
 INTERNAL_IPS = [
-    os.environ.get('IP_DEV'),
+    '127.0.0.1',
 ]
 
 ROOT_URLCONF = 'my_grades.urls'
@@ -102,16 +102,25 @@ WSGI_APPLICATION = 'my_grades.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': os.environ.get('DB_NAME_TEST'),
+#         'HOST':  os.environ.get('DB_HOST_TEST'),
+#         'USER':  os.environ.get('DB_USER_TEST'),
+#         'PASSWORD':  os.environ.get('DB_PASSWORD_TEST'),
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': os.environ.get('DB_NAME_TEST'),
-        'HOST':  os.environ.get('DB_HOST_TEST'),
-        'USER':  os.environ.get('DB_USER_TEST'),
-        'PASSWORD':  os.environ.get('DB_PASSWORD_TEST'),
+        'NAME': 'edumetrica',
+        'HOST':  'edumetrica-test.cnmy06y44h6n.us-east-1.rds.amazonaws.com',
+        'USER':  'podestal',
+        'PASSWORD':  '13anguloX',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
